@@ -65,7 +65,7 @@ This package contains compressor utility for ClickHouse DBMS.
 rm -rf build
 mkdir build
 cd build
-cmake ..
+cmake .. -DCMAKE_BUILD_TYPE:STRING=Release -DDISABLE_MONGODB:BOOL=TRUE 
 make %{?_smp_mflags}
 cd ..
 
